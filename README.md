@@ -1,2 +1,5 @@
-# aurelia-graphs-c3
-C3 adapter for aurelia-graphs.
+# aurelia-charts-c3
+
+[C3](http://c3js.org/)
+adapter for
+[aurelia-charts](https://github.com/SpoonX/aurelia-charts)
