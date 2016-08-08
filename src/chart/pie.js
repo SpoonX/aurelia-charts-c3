@@ -22,6 +22,8 @@ export class PieChart extends Chart {
       return [label].concat(this.dimensions[0].data(dataset.values));
     });
 
+    this.instance.axis.labels({x: this.dimensions[0].label()});
+
     this.settings = {columns};
 
     return this.settings;

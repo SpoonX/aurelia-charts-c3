@@ -34,6 +34,11 @@ export class Chart extends BaseChart {
       ]);
     });
 
+    this.instance.axis.labels({
+      x: this.dimensions[0].label(),
+      y: this.dimensions[1].label()
+    });
+
     this.settings = {columns, xs};
 
     return this.settings;
