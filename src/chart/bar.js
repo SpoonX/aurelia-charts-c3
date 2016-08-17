@@ -1,10 +1,10 @@
-import {scales, chart, quan, qual} from 'aurelia-charts';
-import {Chart} from './base';
+import {scales, chart, quan} from 'aurelia-charts';
+import {OneDimensional} from './one-dimensional';
 
 /* namespaced to enable the use of multiple graph libs */
-@scales([quan, quan], [qual, quan])
+@scales([quan])
 @chart('C3', 'bar')
-export class BarChart extends Chart {
+export class BarChart extends OneDimensional {
 
   settings = {
     data: {
@@ -17,23 +17,5 @@ export class BarChart extends Chart {
       }
     }
   };
-
-  /* one dimensional plot */
-  calculateSettings() {
-    const columns = this.data.map(dataset => {
-      const label = this.dimensions[1].label(dataset);
-
-      return [label].concat(this.dimensions[1].data(dataset.values));
-    });
-
-    this.instance.axis.labels({
-      x: this.dimensions[0].label(),
-      y: this.dimensions[1].label()
-    });
-
-    this.settings = {columns};
-
-    return this.settings;
-  }
 
 }

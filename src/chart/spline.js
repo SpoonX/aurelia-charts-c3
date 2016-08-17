@@ -3,11 +3,11 @@ import {TwoDimensional} from './two-dimensional';
 
 /* namespaced to enable the use of multiple graph libs */
 @scales([quan, quan])
-@chart('C3', 'line')
-export class LineChart extends TwoDimensional {
+@chart('C3', 'spline')
+export class SplineChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'line',
+      type: 'spline',
       columns: []
     }
   }

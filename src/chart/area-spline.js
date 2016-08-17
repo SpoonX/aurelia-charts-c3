@@ -2,11 +2,11 @@ import {scales, chart, quan} from 'aurelia-charts';
 import {TwoDimensional} from './two-dimensional';
 
 @scales([quan, quan])
-@chart('C3', 'step')
-export class StepChart extends TwoDimensional {
+@chart('C3', 'areaSpline')
+export class AreaSplineChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'step',
+      type: 'area-spline',
       columns: []
     }
   }

@@ -1,12 +1,33 @@
-export {AreaChart}       from './chart/area';
-export {BarChart}        from './chart/bar';
-export {Chart}           from './chart/base';
-export {LineChart}       from './chart/line';
-export {PieChart}        from './chart/pie';
-export {DonutChart}      from './chart/donut';
-export {ScatterChart}    from './chart/scatter';
-export {StackedBarChart} from './chart/stackedBar';
-export {StepChart}       from './chart/step';
+export {C3Chart}         from './chart/c3-chart';
 
 export function configure(config) {
+  /**
+   * @todo: enable the configuration of default settings which are shared
+   * between charts
+   */
 }
+
+/////////////////////////
+////// ONE DIMENSIONAL //
+/////////////////////////
+
+export {OneDimensional}  from './chart/one-dimensional';
+export {PieChart}        from './chart/pie';
+export {DonutChart}      from './chart/donut';
+export {GaugeChart}      from './chart/gauge';
+export {BarChart}        from './chart/bar';
+export {StackedBarChart} from './chart/stacked-bar';
+
+/////////////////////////
+////// TWO DIMENSIONAL //
+/////////////////////////
+
+export {TwoDimensional}  from './chart/two-dimensional';
+export {AreaChart}       from './chart/area';
+export {AreaSplineChart} from './chart/area-spline';
+export {AreaStepChart}   from './chart/area-step';
+export {LineChart}       from './chart/line';
+export {SplineChart}     from './chart/spline';
+export {ScatterChart}    from './chart/scatter';
+export {StepChart}       from './chart/step';
+
