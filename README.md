@@ -5,20 +5,22 @@
 
 Aurelia chart c3 supports the following c3 charts.
 
-1. dimension
-  a. pie
-  b. donut
-  c. gauge
+## 1-dimension
 
-2. dimensions
-  a. line
-  b. spline
-  c. step
-  d. area
-  e. area-spline
-  f. area-step
-  g. bar
-  h. scatter
+- pie
+- donut
+- gauge
+
+## 2-dimensions
+
+- line
+- spline
+- step
+- area
+- area-spline
+- area-step
+- bar
+- scatter
 
 ## Installation
 

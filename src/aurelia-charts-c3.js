@@ -1,11 +1,6 @@
-export {C3Chart}         from './chart/c3-chart';
+export {C3Chart} from './chart/c3-chart';
 
-export function configure(config) {
-  /**
-   * @todo: enable the configuration of default settings which are shared
-   * between charts
-   */
-}
+export function configure() {}
 
 /////////////////////////
 ////// ONE DIMENSIONAL //
@@ -30,4 +25,3 @@ export {LineChart}       from './chart/line';
 export {SplineChart}     from './chart/spline';
 export {ScatterChart}    from './chart/scatter';
 export {StepChart}       from './chart/step';
-
