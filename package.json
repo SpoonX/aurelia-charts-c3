@@ -9,7 +9,7 @@
   ],
   "homepage": "http://aurelia.io",
   "bugs": {
-    "url": "https://github.com/aurelia/aurelia-charts-c3/issues"
+    "url": "https://github.com/SpoonX/aurelia-charts-c3/issues"
   },
   "license": "CC0-1.0",
   "author": "SpoonX",
@@ -22,7 +22,7 @@
   "main": "dist/commonjs/aurelia-charts-c3.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/aurelia-charts-c3"
+    "url": "http://github.com/SpoonX/aurelia-charts-c3"
   },
   "devDependencies": {
     "aurelia-tools": "^0.2.3",
@@ -68,6 +68,7 @@
       "dist": "dist/amd"
     },
     "dependencies": {
+      "aurelia-charts": "^0.1.0",
       "c3": "^0.4.11"
     },
     "devDependencies": {
