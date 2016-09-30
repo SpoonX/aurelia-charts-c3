@@ -1,6 +1,6 @@
 {
   "name": "aurelia-charts-c3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "C3 extension for aurelia-charts",
   "keywords": [
     "aurelia",
@@ -62,7 +62,7 @@
   },
   "jspm": {
     "registry": "npm",
-    "main": "index",
+    "main": "aurelia-charts-c3",
     "format": "amd",
     "directories": {
       "dist": "dist/amd"

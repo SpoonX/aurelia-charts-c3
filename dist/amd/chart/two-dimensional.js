@@ -55,7 +55,7 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
         var label = _this2.dimensions[1].label(dataset);
         var xLabel = _this2.dimensions[0].label(dataset);
         xs[label] = xLabel;
-        columns = columns.concat([[label].concat(_this2.dimensions[1].data(dataset.values)), [xLabel].concat(_this2.dimensions[0].data(dataset.values))]);
+        columns = columns.concat([[label].concat(dataset.map(_this2.dimensions[1].value)), [xLabel].concat(dataset.map(_this2.dimensions[0].value))]);
       });
 
       this.instance.axis.labels({

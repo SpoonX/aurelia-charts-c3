@@ -22,6 +22,10 @@ Aurelia chart c3 supports the following c3 charts.
 - bar
 - scatter
 
+## 3-dimensions
+
+- bubble
+
 ## Installation
 
 *todo*

@@ -4,7 +4,7 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.OneDimensional = undefined;
+  exports.ThreeDimensional = undefined;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -36,31 +36,42 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var OneDimensional = exports.OneDimensional = function (_C3Chart) {
-    _inherits(OneDimensional, _C3Chart);
+  var ThreeDimensional = exports.ThreeDimensional = function (_C3Chart) {
+    _inherits(ThreeDimensional, _C3Chart);
 
-    function OneDimensional() {
-      _classCallCheck(this, OneDimensional);
+    function ThreeDimensional() {
+      _classCallCheck(this, ThreeDimensional);
 
       return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
     }
 
-    OneDimensional.prototype.calculateSettings = function calculateSettings() {
+    ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
       var _this2 = this;
 
-      var columns = this.data.map(function (dataset) {
-        var label = dataset.key;
+      var columns = [];
+      var xs = {};
 
-        return [label].concat(dataset.map(_this2.dimensions[0].value));
+      this.dimensions.third = {};
+
+      this.data.forEach(function (dataset) {
+        var label = _this2.dimensions[1].label(dataset);
+        var xLabel = _this2.dimensions[0].label(dataset);
+        xs[label] = xLabel;
+        columns = columns.concat([[label].concat(dataset.map(_this2.dimensions[1].value)), [xLabel].concat(dataset.map(_this2.dimensions[0].value))]);
+
+        _this2.dimensions.third[label] = dataset.map(_this2.dimensions[2].value);
       });
 
-      this.instance.axis.labels({ x: this.dimensions[0].label() });
+      this.instance.axis.labels({
+        x: this.dimensions[0].label(),
+        y: this.dimensions[1].label()
+      });
 
-      this.settings = { columns: columns };
+      this.settings = { columns: columns, xs: xs };
 
       return this.settings;
     };
 
-    return OneDimensional;
+    return ThreeDimensional;
   }(_c3Chart.C3Chart);
 });

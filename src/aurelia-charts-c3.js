@@ -25,3 +25,10 @@ export {LineChart}       from './chart/line';
 export {SplineChart}     from './chart/spline';
 export {ScatterChart}    from './chart/scatter';
 export {StepChart}       from './chart/step';
+
+/////////////////////////
+// THREE DIMENSIONAL   //
+/////////////////////////
+
+export {ThreeDimensional} from './chart/three-dimensional';
+export {BubbleChart}      from './chart/bubble';
