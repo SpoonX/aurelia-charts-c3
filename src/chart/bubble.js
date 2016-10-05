@@ -12,10 +12,6 @@ import {ThreeDimensional} from './three-dimensional';
 export class BubbleChart extends ThreeDimensional {
 
   settings = {
-    grid: {
-      x: {show: true},
-      y: {show: true}
-    },
     data: {
       type: 'scatter',
       columns: []

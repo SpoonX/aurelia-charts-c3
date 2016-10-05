@@ -29,7 +29,11 @@ export class C3Chart extends Chart {
 
   update() {
     this.calculateSettings();
-    this.instance.load(this.settings);
+    this.instance.unload({
+      done: () => {
+        this.instance.load(this.settings);
+      }
+    });
   }
 
   destroy() {
