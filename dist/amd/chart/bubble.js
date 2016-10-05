@@ -51,10 +51,6 @@ define(['exports', 'aurelia-charts', './three-dimensional'], function (exports, 
       }
 
       return _ret = (_temp = (_this = _possibleConstructorReturn(this, _ThreeDimensional.call.apply(_ThreeDimensional, [this].concat(args))), _this), _this.settings = {
-        grid: {
-          x: { show: true },
-          y: { show: true }
-        },
         data: {
           type: 'scatter',
           columns: []

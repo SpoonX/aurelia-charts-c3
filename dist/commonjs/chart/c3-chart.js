@@ -53,8 +53,14 @@ var C3Chart = exports.C3Chart = (_dec = (0, _aureliaCharts.chart)('C3'), _dec(_c
   };
 
   C3Chart.prototype.update = function update() {
+    var _this2 = this;
+
     this.calculateSettings();
-    this.instance.load(this.settings);
+    this.instance.unload({
+      done: function done() {
+        _this2.instance.load(_this2.settings);
+      }
+    });
   };
 
   C3Chart.prototype.destroy = function destroy() {

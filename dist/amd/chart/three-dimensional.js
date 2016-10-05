@@ -1,4 +1,4 @@
-define(['exports', './c3-chart'], function (exports, _c3Chart) {
+define(['exports', './c3-chart', './two-dimensional'], function (exports, _c3Chart, _twoDimensional) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -48,26 +48,15 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
     ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
       var _this2 = this;
 
-      var columns = [];
-      var xs = {};
-
       this.dimensions.third = {};
 
-      this.data.forEach(function (dataset) {
-        var label = _this2.dimensions[1].label(dataset);
-        var xLabel = _this2.dimensions[0].label(dataset);
-        xs[label] = xLabel;
-        columns = columns.concat([[label].concat(dataset.map(_this2.dimensions[1].value)), [xLabel].concat(dataset.map(_this2.dimensions[0].value))]);
+      this.settings = _twoDimensional.TwoDimensional.prototype.calculateSettings.call(this);
 
-        _this2.dimensions.third[label] = dataset.map(_this2.dimensions[2].value);
+      this.data.forEach(function (dataset, index) {
+        var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
+
+        _this2.dimensions.third[name] = dataset.map(_this2.dimensions[2].value);
       });
-
-      this.instance.axis.labels({
-        x: this.dimensions[0].label(),
-        y: this.dimensions[1].label()
-      });
-
-      this.settings = { columns: columns, xs: xs };
 
       return this.settings;
     };

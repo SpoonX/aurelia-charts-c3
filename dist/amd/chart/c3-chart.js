@@ -78,8 +78,14 @@ define(['exports', 'aurelia-charts', 'c3'], function (exports, _aureliaCharts, _
     };
 
     C3Chart.prototype.update = function update() {
+      var _this2 = this;
+
       this.calculateSettings();
-      this.instance.load(this.settings);
+      this.instance.unload({
+        done: function done() {
+          _this2.instance.load(_this2.settings);
+        }
+      });
     };
 
     C3Chart.prototype.destroy = function destroy() {

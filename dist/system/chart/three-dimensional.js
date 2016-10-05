@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['./c3-chart'], function (_export, _context) {
+System.register(['./c3-chart', './two-dimensional'], function (_export, _context) {
   "use strict";
 
-  var C3Chart, ThreeDimensional;
+  var C3Chart, TwoDimensional, ThreeDimensional;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -38,6 +38,8 @@ System.register(['./c3-chart'], function (_export, _context) {
   return {
     setters: [function (_c3Chart) {
       C3Chart = _c3Chart.C3Chart;
+    }, function (_twoDimensional) {
+      TwoDimensional = _twoDimensional.TwoDimensional;
     }],
     execute: function () {
       _export('ThreeDimensional', ThreeDimensional = function (_C3Chart) {
@@ -52,26 +54,15 @@ System.register(['./c3-chart'], function (_export, _context) {
         ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
           var _this2 = this;
 
-          var columns = [];
-          var xs = {};
-
           this.dimensions.third = {};
 
-          this.data.forEach(function (dataset) {
-            var label = _this2.dimensions[1].label(dataset);
-            var xLabel = _this2.dimensions[0].label(dataset);
-            xs[label] = xLabel;
-            columns = columns.concat([[label].concat(dataset.map(_this2.dimensions[1].value)), [xLabel].concat(dataset.map(_this2.dimensions[0].value))]);
+          this.settings = TwoDimensional.prototype.calculateSettings.call(this);
 
-            _this2.dimensions.third[label] = dataset.map(_this2.dimensions[2].value);
+          this.data.forEach(function (dataset, index) {
+            var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
+
+            _this2.dimensions.third[name] = dataset.map(_this2.dimensions[2].value);
           });
-
-          this.instance.axis.labels({
-            x: this.dimensions[0].label(),
-            y: this.dimensions[1].label()
-          });
-
-          this.settings = { columns: columns, xs: xs };
 
           return this.settings;
         };

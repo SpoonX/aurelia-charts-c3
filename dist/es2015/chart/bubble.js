@@ -8,10 +8,6 @@ export let BubbleChart = (_dec = scales([quan, quan, quan]), _dec2 = chart('C3',
     var _temp;
 
     return _temp = super(...args), this.settings = {
-      grid: {
-        x: { show: true },
-        y: { show: true }
-      },
       data: {
         type: 'scatter',
         columns: []

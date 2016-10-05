@@ -48,13 +48,11 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
     OneDimensional.prototype.calculateSettings = function calculateSettings() {
       var _this2 = this;
 
-      var columns = this.data.map(function (dataset) {
-        var label = dataset.key;
+      var columns = this.data.map(function (dataset, index, data) {
+        var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, data) : index;
 
-        return [label].concat(dataset.map(_this2.dimensions[0].value));
+        return [name].concat(dataset.map(_this2.dimensions[0].value));
       });
-
-      this.instance.axis.labels({ x: this.dimensions[0].label() });
 
       this.settings = { columns: columns };
 
