@@ -1,10 +1,10 @@
-define(['exports', './c3-chart'], function (exports, _c3Chart) {
+define(['exports', './c3-chart', './two-dimensional'], function (exports, _c3Chart, _twoDimensional) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.TwoDimensional = undefined;
+  exports.ThreeDimensional = undefined;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -36,35 +36,31 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  var TwoDimensional = exports.TwoDimensional = function (_C3Chart) {
-    _inherits(TwoDimensional, _C3Chart);
+  var ThreeDimensional = exports.ThreeDimensional = function (_C3Chart) {
+    _inherits(ThreeDimensional, _C3Chart);
 
-    function TwoDimensional() {
-      _classCallCheck(this, TwoDimensional);
+    function ThreeDimensional() {
+      _classCallCheck(this, ThreeDimensional);
 
       return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
     }
 
-    TwoDimensional.prototype.calculateSettings = function calculateSettings() {
+    ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
       var _this2 = this;
 
-      var columns = [];
-      var xs = {};
+      this.dimensions.third = {};
+
+      this.settings = _twoDimensional.TwoDimensional.prototype.calculateSettings.call(this);
 
       this.data.forEach(function (dataset, index) {
         var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
-        var yKey = name;
-        var xKey = 'x' + yKey;
 
-        xs[yKey] = xKey;
-        columns = columns.concat([[yKey].concat(dataset.map(_this2.dimensions[1].value)), [xKey].concat(dataset.map(_this2.dimensions[0].value))]);
+        _this2.dimensions.third[name] = dataset.map(_this2.dimensions[2].value);
       });
-
-      this.settings = { columns: columns, xs: xs };
 
       return this.settings;
     };
 
-    return TwoDimensional;
+    return ThreeDimensional;
   }(_c3Chart.C3Chart);
 });

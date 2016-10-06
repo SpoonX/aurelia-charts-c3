@@ -6,7 +6,7 @@ import {TwoDimensional} from './two-dimensional';
 export class AreaSplineChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'area-spline',
+      type   : 'area-spline',
       columns: []
     }
   }

@@ -1,7 +1,11 @@
 'use strict';
 
-System.register(['./chart/c3-chart', './chart/one-dimensional', './chart/pie', './chart/donut', './chart/gauge', './chart/bar', './chart/stacked-bar', './chart/two-dimensional', './chart/area', './chart/area-spline', './chart/area-step', './chart/line', './chart/spline', './chart/scatter', './chart/step'], function (_export, _context) {
+System.register(['./chart/c3-chart', './chart/one-dimensional', './chart/pie', './chart/donut', './chart/gauge', './chart/bar', './chart/stacked-bar', './chart/two-dimensional', './chart/area', './chart/area-spline', './chart/area-step', './chart/line', './chart/spline', './chart/scatter', './chart/step', './chart/three-dimensional', './chart/bubble'], function (_export, _context) {
   "use strict";
+
+  function configure() {}
+
+  _export('configure', configure);
 
   return {
     setters: [function (_chartC3Chart) {
@@ -79,11 +83,17 @@ System.register(['./chart/c3-chart', './chart/one-dimensional', './chart/pie', '
       _exportObj15.StepChart = _chartStep.StepChart;
 
       _export(_exportObj15);
-    }],
-    execute: function () {
-      function configure() {}
+    }, function (_chartThreeDimensional) {
+      var _exportObj16 = {};
+      _exportObj16.ThreeDimensional = _chartThreeDimensional.ThreeDimensional;
 
-      _export('configure', configure);
-    }
+      _export(_exportObj16);
+    }, function (_chartBubble) {
+      var _exportObj17 = {};
+      _exportObj17.BubbleChart = _chartBubble.BubbleChart;
+
+      _export(_exportObj17);
+    }],
+    execute: function () {}
   };
 });

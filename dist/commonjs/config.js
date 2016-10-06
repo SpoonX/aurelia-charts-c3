@@ -14,7 +14,7 @@ var Config = exports.Config = function () {
   }
 
   Config.prototype.configure = function configure() {
-    var incomming = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var incomming = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     Object.assign(this.settings, incomming);
 

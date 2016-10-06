@@ -1,4 +1,4 @@
-define(['exports', './chart/c3-chart', './chart/one-dimensional', './chart/pie', './chart/donut', './chart/gauge', './chart/bar', './chart/stacked-bar', './chart/two-dimensional', './chart/area', './chart/area-spline', './chart/area-step', './chart/line', './chart/spline', './chart/scatter', './chart/step'], function (exports, _c3Chart, _oneDimensional, _pie, _donut, _gauge, _bar, _stackedBar, _twoDimensional, _area, _areaSpline, _areaStep, _line, _spline, _scatter, _step) {
+define(['exports', './chart/c3-chart', './chart/one-dimensional', './chart/pie', './chart/donut', './chart/gauge', './chart/bar', './chart/stacked-bar', './chart/two-dimensional', './chart/area', './chart/area-spline', './chart/area-step', './chart/line', './chart/spline', './chart/scatter', './chart/step', './chart/three-dimensional', './chart/bubble'], function (exports, _c3Chart, _oneDimensional, _pie, _donut, _gauge, _bar, _stackedBar, _twoDimensional, _area, _areaSpline, _areaStep, _line, _spline, _scatter, _step, _threeDimensional, _bubble) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -93,6 +93,18 @@ define(['exports', './chart/c3-chart', './chart/one-dimensional', './chart/pie',
     enumerable: true,
     get: function () {
       return _step.StepChart;
+    }
+  });
+  Object.defineProperty(exports, 'ThreeDimensional', {
+    enumerable: true,
+    get: function () {
+      return _threeDimensional.ThreeDimensional;
+    }
+  });
+  Object.defineProperty(exports, 'BubbleChart', {
+    enumerable: true,
+    get: function () {
+      return _bubble.BubbleChart;
     }
   });
   function configure() {}

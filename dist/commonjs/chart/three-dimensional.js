@@ -3,9 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TwoDimensional = undefined;
+exports.ThreeDimensional = undefined;
 
 var _c3Chart = require('./c3-chart');
+
+var _twoDimensional = require('./two-dimensional');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -13,34 +15,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TwoDimensional = exports.TwoDimensional = function (_C3Chart) {
-  _inherits(TwoDimensional, _C3Chart);
+var ThreeDimensional = exports.ThreeDimensional = function (_C3Chart) {
+  _inherits(ThreeDimensional, _C3Chart);
 
-  function TwoDimensional() {
-    _classCallCheck(this, TwoDimensional);
+  function ThreeDimensional() {
+    _classCallCheck(this, ThreeDimensional);
 
     return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
   }
 
-  TwoDimensional.prototype.calculateSettings = function calculateSettings() {
+  ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
     var _this2 = this;
 
-    var columns = [];
-    var xs = {};
+    this.dimensions.third = {};
+
+    this.settings = _twoDimensional.TwoDimensional.prototype.calculateSettings.call(this);
 
     this.data.forEach(function (dataset, index) {
       var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
-      var yKey = name;
-      var xKey = 'x' + yKey;
 
-      xs[yKey] = xKey;
-      columns = columns.concat([[yKey].concat(dataset.map(_this2.dimensions[1].value)), [xKey].concat(dataset.map(_this2.dimensions[0].value))]);
+      _this2.dimensions.third[name] = dataset.map(_this2.dimensions[2].value);
     });
-
-    this.settings = { columns: columns, xs: xs };
 
     return this.settings;
   };
 
-  return TwoDimensional;
+  return ThreeDimensional;
 }(_c3Chart.C3Chart);

@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['./c3-chart'], function (_export, _context) {
+System.register(['./c3-chart', './two-dimensional'], function (_export, _context) {
   "use strict";
 
-  var C3Chart, OneDimensional;
+  var C3Chart, TwoDimensional, ThreeDimensional;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -38,35 +38,39 @@ System.register(['./c3-chart'], function (_export, _context) {
   return {
     setters: [function (_c3Chart) {
       C3Chart = _c3Chart.C3Chart;
+    }, function (_twoDimensional) {
+      TwoDimensional = _twoDimensional.TwoDimensional;
     }],
     execute: function () {
-      _export('OneDimensional', OneDimensional = function (_C3Chart) {
-        _inherits(OneDimensional, _C3Chart);
+      _export('ThreeDimensional', ThreeDimensional = function (_C3Chart) {
+        _inherits(ThreeDimensional, _C3Chart);
 
-        function OneDimensional() {
-          _classCallCheck(this, OneDimensional);
+        function ThreeDimensional() {
+          _classCallCheck(this, ThreeDimensional);
 
           return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
         }
 
-        OneDimensional.prototype.calculateSettings = function calculateSettings() {
+        ThreeDimensional.prototype.calculateSettings = function calculateSettings() {
           var _this2 = this;
 
-          var columns = this.data.map(function (dataset, index, data) {
-            var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, data) : index;
+          this.dimensions.third = {};
 
-            return [name].concat(dataset.map(_this2.dimensions[0].value));
+          this.settings = TwoDimensional.prototype.calculateSettings.call(this);
+
+          this.data.forEach(function (dataset, index) {
+            var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
+
+            _this2.dimensions.third[name] = dataset.map(_this2.dimensions[2].value);
           });
-
-          this.settings = { columns: columns };
 
           return this.settings;
         };
 
-        return OneDimensional;
+        return ThreeDimensional;
       }(C3Chart));
 
-      _export('OneDimensional', OneDimensional);
+      _export('ThreeDimensional', ThreeDimensional);
     }
   };
 });

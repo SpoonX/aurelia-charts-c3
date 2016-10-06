@@ -28,7 +28,11 @@ export let C3Chart = (_dec = chart('C3'), _dec(_class = class C3Chart extends Ch
 
   update() {
     this.calculateSettings();
-    this.instance.load(this.settings);
+    this.instance.unload({
+      done: () => {
+        this.instance.load(this.settings);
+      }
+    });
   }
 
   destroy() {

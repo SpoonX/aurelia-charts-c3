@@ -6,21 +6,17 @@ export let TwoDimensional = class TwoDimensional extends C3Chart {
     let columns = [];
     let xs = {};
 
-    this.data.forEach(dataset => {
-      const label = this.dimensions[1].label(dataset);
-      const xLabel = this.dimensions[0].label(dataset);
-      xs[label] = xLabel;
-      columns = columns.concat([[label].concat(this.dimensions[1].data(dataset.values)), [xLabel].concat(this.dimensions[0].data(dataset.values))]);
-    });
+    this.data.forEach((dataset, index) => {
+      const name = this.dimensions.name ? this.dimensions.name(dataset, index, this.data) : index;
+      const yKey = name;
+      const xKey = 'x' + yKey;
 
-    this.instance.axis.labels({
-      x: this.dimensions[0].label(),
-      y: this.dimensions[1].label()
+      xs[yKey] = xKey;
+      columns = columns.concat([[yKey].concat(dataset.map(this.dimensions[1].value)), [xKey].concat(dataset.map(this.dimensions[0].value))]);
     });
 
     this.settings = { columns, xs };
 
     return this.settings;
   }
-
 };

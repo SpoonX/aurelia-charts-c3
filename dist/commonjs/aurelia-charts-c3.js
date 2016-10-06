@@ -139,4 +139,22 @@ Object.defineProperty(exports, 'StepChart', {
     return _step.StepChart;
   }
 });
+
+var _threeDimensional = require('./chart/three-dimensional');
+
+Object.defineProperty(exports, 'ThreeDimensional', {
+  enumerable: true,
+  get: function get() {
+    return _threeDimensional.ThreeDimensional;
+  }
+});
+
+var _bubble = require('./chart/bubble');
+
+Object.defineProperty(exports, 'BubbleChart', {
+  enumerable: true,
+  get: function get() {
+    return _bubble.BubbleChart;
+  }
+});
 function configure() {}

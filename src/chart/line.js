@@ -7,7 +7,7 @@ import {TwoDimensional} from './two-dimensional';
 export class LineChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'line',
+      type   : 'line',
       columns: []
     }
   }

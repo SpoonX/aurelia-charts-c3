@@ -55,16 +55,13 @@ System.register(['./c3-chart'], function (_export, _context) {
           var columns = [];
           var xs = {};
 
-          this.data.forEach(function (dataset) {
-            var label = _this2.dimensions[1].label(dataset);
-            var xLabel = _this2.dimensions[0].label(dataset);
-            xs[label] = xLabel;
-            columns = columns.concat([[label].concat(_this2.dimensions[1].data(dataset.values)), [xLabel].concat(_this2.dimensions[0].data(dataset.values))]);
-          });
+          this.data.forEach(function (dataset, index) {
+            var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, _this2.data) : index;
+            var yKey = name;
+            var xKey = 'x' + yKey;
 
-          this.instance.axis.labels({
-            x: this.dimensions[0].label(),
-            y: this.dimensions[1].label()
+            xs[yKey] = xKey;
+            columns = columns.concat([[yKey].concat(dataset.map(_this2.dimensions[1].value)), [xKey].concat(dataset.map(_this2.dimensions[0].value))]);
           });
 
           this.settings = { columns: columns, xs: xs };

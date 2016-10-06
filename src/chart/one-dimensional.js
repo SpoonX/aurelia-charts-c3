@@ -8,17 +8,14 @@ import {C3Chart} from './c3-chart';
 export class OneDimensional extends C3Chart {
 
   calculateSettings() {
-    const columns = this.data.map(dataset => {
-      const label = dataset.key;
+    let columns = this.data.map((dataset, index, data) => {
+      const name = this.dimensions.name ? this.dimensions.name(dataset, index, data) : index;
 
-      return [label].concat(this.dimensions[0].data(dataset.values));
+      return [name].concat(dataset.map(this.dimensions[0].value));
     });
-
-    this.instance.axis.labels({x: this.dimensions[0].label()});
 
     this.settings = {columns};
 
     return this.settings;
   }
-
 }
