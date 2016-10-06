@@ -6,7 +6,7 @@ import {TwoDimensional} from './two-dimensional';
 export class StepChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'step',
+      type   : 'step',
       columns: []
     }
   }

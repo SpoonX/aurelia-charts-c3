@@ -7,7 +7,7 @@ import {TwoDimensional} from './two-dimensional';
 export class SplineChart extends TwoDimensional {
   settings = {
     data: {
-      type: 'spline',
+      type   : 'spline',
       columns: []
     }
   }

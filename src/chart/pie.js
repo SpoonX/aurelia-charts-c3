@@ -7,7 +7,7 @@ export class PieChart extends OneDimensional {
 
   settings = {
     data: {
-      type:    'pie',
+      type   : 'pie',
       columns: []
     }
   };

@@ -7,7 +7,7 @@ export class DonutChart extends OneDimensional {
 
   settings = {
     data: {
-      type:    'donut',
+      type   : 'donut',
       columns: []
     }
   };

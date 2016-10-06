@@ -13,7 +13,7 @@ export class BubbleChart extends ThreeDimensional {
 
   settings = {
     data: {
-      type: 'scatter',
+      type   : 'scatter',
       columns: []
     },
     point: {

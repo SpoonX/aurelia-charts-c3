@@ -1,5 +1,5 @@
 import {scales, chart, quan} from 'aurelia-charts';
-import {OneDimensional} from './one-dimensional';
+import {OneDimensional}      from './one-dimensional';
 
 /* namespaced to enable the use of multiple graph libs */
 @scales([quan])
@@ -8,10 +8,10 @@ export class BarChart extends OneDimensional {
 
   settings = {
     data: {
-      type:    'bar',
+      type   : 'bar',
       columns: []
     },
-    bar:  {
+    bar: {
       width: {
         ratio: 0.8
       }

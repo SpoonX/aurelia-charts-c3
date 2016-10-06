@@ -1,4 +1,3 @@
-// import {configFor} from 'aurelia-config';
 
 /**
  * @class

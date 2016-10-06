@@ -1,5 +1,5 @@
 import {quan, scales, chart} from 'aurelia-charts';
-import {TwoDimensional} from './two-dimensional';
+import {TwoDimensional}      from './two-dimensional';
 
 /* namespaced to enable the use of multiple graph libs */
 @scales([quan, quan])
@@ -7,7 +7,7 @@ import {TwoDimensional} from './two-dimensional';
 export class ScatterChart extends TwoDimensional {
   settings = {
     data: {
-      type:    'scatter',
+      type   : 'scatter',
       columns: []
     }
   }

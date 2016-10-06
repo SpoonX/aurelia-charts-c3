@@ -1,5 +1,5 @@
-import {C3Chart} from './c3-chart';
 import {TwoDimensional} from './two-dimensional';
+import {C3Chart}        from './c3-chart';
 
 /**
  * @class OneDimensional

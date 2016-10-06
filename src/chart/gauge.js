@@ -7,7 +7,7 @@ export class GaugeChart extends OneDimensional {
 
   settings = {
     data: {
-      type:    'gauge',
+      type   : 'gauge',
       columns: []
     }
   };
