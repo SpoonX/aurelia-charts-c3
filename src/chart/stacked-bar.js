@@ -11,7 +11,7 @@ export class StackedBarChart extends OneDimensional {
       type   : 'bar',
       columns: []
     },
-    bar:  {
+    bar: {
       width: {
         ratio: 0.8
       }
@@ -33,5 +33,4 @@ export class StackedBarChart extends OneDimensional {
       return this.settings;
     };
   }
-
 }

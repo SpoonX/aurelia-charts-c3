@@ -1,0 +1,24 @@
+{
+  "name": "aurelia-charts",
+  "version": "0.1.1",
+  "description": "C3 extension for aurelia-charts",
+  "keywords": [
+    "spoonx",
+    "aurelia",
+    "plugin",
+    "charts"
+  ],
+  "homepage": "https://github.com/SpoonX/aurelia-charts-c3",
+  "main": "dist/commonjs/aurelia-charts-c3.js",
+  "moduleType": "node",
+  "license": "CC0-1.0",
+  "author": "SpoonX <info@spoonx.nl>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/SpoonX/aurelia-charts-c3"
+  },
+  "dependencies": {
+    "aurelia-charts": "^0.1.0",
+    "c3": "^0.4.11"
+  }
+}

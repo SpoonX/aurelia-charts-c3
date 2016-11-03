@@ -1,7 +1,5 @@
 export {C3Chart} from './chart/c3-chart';
 
-export function configure() {}
-
 /////////////////////////
 ////// ONE DIMENSIONAL //
 /////////////////////////
