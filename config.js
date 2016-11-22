@@ -7,7 +7,8 @@ System.config({
   },
 
   map: {
-    "aurelia-charts": "npm:aurelia-charts@0.1.0",
+    "aurelia-charts": "npm:aurelia-charts@0.1.1",
+    "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.1.1",
     "c3": "npm:c3@0.4.11",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -31,49 +32,49 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
     },
-    "npm:aurelia-binding@1.0.6": {
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+    "npm:aurelia-binding@1.0.9": {
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0"
     },
-    "npm:aurelia-charts@0.1.0": {
+    "npm:aurelia-charts@0.1.1": {
       "array-equal": "npm:array-equal@1.0.0",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-form": "npm:aurelia-form@0.1.12",
-      "aurelia-framework": "npm:aurelia-framework@1.0.5",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
+      "aurelia-framework": "npm:aurelia-framework@1.0.7",
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
       "extend": "npm:extend@3.0.0",
       "typer": "npm:typer@1.1.0"
     },
-    "npm:aurelia-dependency-injection@1.0.0": {
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+    "npm:aurelia-dependency-injection@1.2.0": {
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
     },
     "npm:aurelia-form@0.1.12": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-framework": "npm:aurelia-framework@1.0.5",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
+      "aurelia-framework": "npm:aurelia-framework@1.0.7",
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
       "aurelia-validatejs": "npm:aurelia-validatejs@0.6.0",
       "aurelia-view-manager": "npm:aurelia-view-manager@0.0.7",
       "extend": "npm:extend@3.0.0"
     },
-    "npm:aurelia-framework@1.0.5": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.6",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
+    "npm:aurelia-framework@1.0.7": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.9",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0",
-      "aurelia-templating": "npm:aurelia-templating@1.1.1"
+      "aurelia-templating": "npm:aurelia-templating@1.1.2"
     },
     "npm:aurelia-loader@1.0.0": {
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-path": "npm:aurelia-path@1.1.1"
     },
-    "npm:aurelia-metadata@1.0.0": {
+    "npm:aurelia-metadata@1.0.2": {
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
     },
     "npm:aurelia-polyfills@1.1.1": {
@@ -82,45 +83,45 @@ System.config({
     "npm:aurelia-task-queue@1.1.0": {
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
     },
-    "npm:aurelia-templating@1.1.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.6",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
+    "npm:aurelia-templating@1.1.2": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.9",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0"
     },
     "npm:aurelia-validatejs@0.6.0": {
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-validation": "npm:aurelia-validation@0.10.1",
       "validate.js": "npm:validate.js@0.10.0"
     },
     "npm:aurelia-validation@0.10.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.6",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.9",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0",
-      "aurelia-templating": "npm:aurelia-templating@1.1.1"
+      "aurelia-templating": "npm:aurelia-templating@1.1.2"
     },
     "npm:aurelia-view-manager@0.0.7": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
-      "aurelia-templating": "npm:aurelia-templating@1.1.1",
+      "aurelia-templating": "npm:aurelia-templating@1.1.2",
       "extend": "npm:extend@3.0.0"
     },
     "npm:buffer@3.6.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "ieee754": "npm:ieee754@1.1.6",
+      "ieee754": "npm:ieee754@1.1.8",
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:c3@0.4.11": {
-      "css": "github:systemjs/plugin-css@0.1.29",
+      "css": "github:systemjs/plugin-css@0.1.32",
       "d3": "npm:d3@3.5.17"
     },
     "npm:inherits@2.0.1": {
