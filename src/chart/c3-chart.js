@@ -27,9 +27,14 @@ export class C3Chart extends Chart {
     logger.error(`'calculateSettings' method is not defined for ${this.constructor.name}`);
   }
 
-  update() {
+  update(newData, oldData) {
+    const newIds    = this.dimensionIds(newData || []);
+    const oldIds    = this.dimensionIds(oldData || []);
+    const unloadIds = oldIds.filter(oldId => newIds.indexOf(oldId) === -1);
+
     this.calculateSettings();
     this.instance.unload({
+      ids : unloadIds,
       done: () => {
         this.instance.load(this.settings);
       }
@@ -44,4 +49,11 @@ export class C3Chart extends Chart {
     this.instance.transform(type);
   }
 
+  dimensionIds(data) {
+    return data.map((dataset, index) => {
+      return this.dimensions.name ? this.dimensions.name(dataset, index, data) : index;
+    });
+  }
+
 }
+
