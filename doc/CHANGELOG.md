@@ -1,3 +1,8 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/SpoonX/aurelia-charts-c3/compare/0.1.1...v0.2.0) (2016-11-25)
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/SpoonX/aurelia-charts-c3/compare/0.1.1...v0.1.0) (2016-11-25)
 
