@@ -5,11 +5,7 @@ System.register(['aurelia-charts', './one-dimensional'], function (_export, _con
 
   var scales, chart, quan, OneDimensional, _dec, _dec2, _class, GaugeChart;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -50,7 +46,7 @@ System.register(['aurelia-charts', './one-dimensional'], function (_export, _con
         function GaugeChart() {
           var _temp, _this, _ret;
 
-          _classCallCheck(this, GaugeChart);
+          
 
           for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];

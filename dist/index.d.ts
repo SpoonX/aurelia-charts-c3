@@ -1,0 +1,1 @@
+export * from 'aurelia-charts-c3/aurelia-charts-c3';

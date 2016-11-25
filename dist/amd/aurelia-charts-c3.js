@@ -10,7 +10,6 @@ define(['exports', './chart/c3-chart', './chart/one-dimensional', './chart/pie',
       return _c3Chart.C3Chart;
     }
   });
-  exports.configure = configure;
   Object.defineProperty(exports, 'OneDimensional', {
     enumerable: true,
     get: function () {
@@ -107,5 +106,4 @@ define(['exports', './chart/c3-chart', './chart/one-dimensional', './chart/pie',
       return _bubble.BubbleChart;
     }
   });
-  function configure() {}
 });

@@ -5,11 +5,7 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
 
   var logger, chart, Chart, c3, _dec, _class, C3Chart;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -50,7 +46,7 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
         function C3Chart() {
           var _temp, _this, _ret;
 
-          _classCallCheck(this, C3Chart);
+          
 
           for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
@@ -75,11 +71,18 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
           logger.error('\'calculateSettings\' method is not defined for ' + this.constructor.name);
         };
 
-        C3Chart.prototype.update = function update() {
+        C3Chart.prototype.update = function update(newData, oldData) {
           var _this2 = this;
+
+          var newIds = this.dimensionIds(newData || []);
+          var oldIds = this.dimensionIds(oldData || []);
+          var unloadIds = oldIds.filter(function (oldId) {
+            return newIds.indexOf(oldId) === -1;
+          });
 
           this.calculateSettings();
           this.instance.unload({
+            ids: unloadIds,
             done: function done() {
               _this2.instance.load(_this2.settings);
             }
@@ -92,6 +95,14 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
 
         C3Chart.prototype.typeChanged = function typeChanged(type) {
           this.instance.transform(type);
+        };
+
+        C3Chart.prototype.dimensionIds = function dimensionIds(data) {
+          var _this3 = this;
+
+          return data.map(function (dataset, index) {
+            return _this3.dimensions.name ? _this3.dimensions.name(dataset, index, data) : index;
+          });
         };
 
         return C3Chart;

@@ -7,7 +7,7 @@ exports.OneDimensional = undefined;
 
 var _c3Chart = require('./c3-chart');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
@@ -17,7 +17,7 @@ var OneDimensional = exports.OneDimensional = function (_C3Chart) {
   _inherits(OneDimensional, _C3Chart);
 
   function OneDimensional() {
-    _classCallCheck(this, OneDimensional);
+    
 
     return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
   }

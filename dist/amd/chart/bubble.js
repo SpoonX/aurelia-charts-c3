@@ -6,11 +6,7 @@ define(['exports', 'aurelia-charts', './three-dimensional'], function (exports, 
   });
   exports.BubbleChart = undefined;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -44,7 +40,7 @@ define(['exports', 'aurelia-charts', './three-dimensional'], function (exports, 
     function BubbleChart() {
       var _temp, _this, _ret;
 
-      _classCallCheck(this, BubbleChart);
+      
 
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];

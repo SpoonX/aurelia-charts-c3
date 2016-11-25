@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ThreeDimensional = undefined;
 
-var _c3Chart = require('./c3-chart');
-
 var _twoDimensional = require('./two-dimensional');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _c3Chart = require('./c3-chart');
+
+
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
@@ -19,7 +19,7 @@ var ThreeDimensional = exports.ThreeDimensional = function (_C3Chart) {
   _inherits(ThreeDimensional, _C3Chart);
 
   function ThreeDimensional() {
-    _classCallCheck(this, ThreeDimensional);
+    
 
     return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
   }

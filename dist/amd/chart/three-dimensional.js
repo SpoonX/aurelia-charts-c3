@@ -1,4 +1,4 @@
-define(['exports', './c3-chart', './two-dimensional'], function (exports, _c3Chart, _twoDimensional) {
+define(['exports', './two-dimensional', './c3-chart'], function (exports, _twoDimensional, _c3Chart) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -6,11 +6,7 @@ define(['exports', './c3-chart', './two-dimensional'], function (exports, _c3Cha
   });
   exports.ThreeDimensional = undefined;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -40,7 +36,7 @@ define(['exports', './c3-chart', './two-dimensional'], function (exports, _c3Cha
     _inherits(ThreeDimensional, _C3Chart);
 
     function ThreeDimensional() {
-      _classCallCheck(this, ThreeDimensional);
+      
 
       return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
     }

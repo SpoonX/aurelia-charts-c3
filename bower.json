@@ -1,6 +1,6 @@
 {
   "name": "aurelia-charts",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "C3 extension for aurelia-charts",
   "keywords": [
     "spoonx",
@@ -18,7 +18,7 @@
     "url": "http://github.com/SpoonX/aurelia-charts-c3"
   },
   "dependencies": {
-    "aurelia-charts": "^0.1.0",
+    "aurelia-charts": "^0.2.0",
     "c3": "^0.4.11"
   }
 }

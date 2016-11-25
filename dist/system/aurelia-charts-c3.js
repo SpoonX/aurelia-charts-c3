@@ -3,10 +3,6 @@
 System.register(['./chart/c3-chart', './chart/one-dimensional', './chart/pie', './chart/donut', './chart/gauge', './chart/bar', './chart/stacked-bar', './chart/two-dimensional', './chart/area', './chart/area-spline', './chart/area-step', './chart/line', './chart/spline', './chart/scatter', './chart/step', './chart/three-dimensional', './chart/bubble'], function (_export, _context) {
   "use strict";
 
-  function configure() {}
-
-  _export('configure', configure);
-
   return {
     setters: [function (_chartC3Chart) {
       var _exportObj = {};

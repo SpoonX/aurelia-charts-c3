@@ -5,11 +5,7 @@ System.register(['./c3-chart'], function (_export, _context) {
 
   var C3Chart, OneDimensional;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -44,7 +40,7 @@ System.register(['./c3-chart'], function (_export, _context) {
         _inherits(OneDimensional, _C3Chart);
 
         function OneDimensional() {
-          _classCallCheck(this, OneDimensional);
+          
 
           return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
         }
