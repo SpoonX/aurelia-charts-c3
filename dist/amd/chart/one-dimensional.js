@@ -6,11 +6,7 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
   });
   exports.OneDimensional = undefined;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -40,7 +36,7 @@ define(['exports', './c3-chart'], function (exports, _c3Chart) {
     _inherits(OneDimensional, _C3Chart);
 
     function OneDimensional() {
-      _classCallCheck(this, OneDimensional);
+      
 
       return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
     }

@@ -5,11 +5,7 @@ System.register(['aurelia-charts', './two-dimensional'], function (_export, _con
 
   var quan, scales, chart, TwoDimensional, _dec, _dec2, _class, SplineChart;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -50,7 +46,7 @@ System.register(['aurelia-charts', './two-dimensional'], function (_export, _con
         function SplineChart() {
           var _temp, _this, _ret;
 
-          _classCallCheck(this, SplineChart);
+          
 
           for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];

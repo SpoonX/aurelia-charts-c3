@@ -1,15 +1,11 @@
 'use strict';
 
-System.register(['./c3-chart', './two-dimensional'], function (_export, _context) {
+System.register(['./two-dimensional', './c3-chart'], function (_export, _context) {
   "use strict";
 
-  var C3Chart, TwoDimensional, ThreeDimensional;
+  var TwoDimensional, C3Chart, ThreeDimensional;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -36,17 +32,17 @@ System.register(['./c3-chart', './two-dimensional'], function (_export, _context
   }
 
   return {
-    setters: [function (_c3Chart) {
-      C3Chart = _c3Chart.C3Chart;
-    }, function (_twoDimensional) {
+    setters: [function (_twoDimensional) {
       TwoDimensional = _twoDimensional.TwoDimensional;
+    }, function (_c3Chart) {
+      C3Chart = _c3Chart.C3Chart;
     }],
     execute: function () {
       _export('ThreeDimensional', ThreeDimensional = function (_C3Chart) {
         _inherits(ThreeDimensional, _C3Chart);
 
         function ThreeDimensional() {
-          _classCallCheck(this, ThreeDimensional);
+          
 
           return _possibleConstructorReturn(this, _C3Chart.apply(this, arguments));
         }

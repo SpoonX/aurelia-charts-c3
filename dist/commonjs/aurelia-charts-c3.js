@@ -12,7 +12,6 @@ Object.defineProperty(exports, 'C3Chart', {
     return _c3Chart.C3Chart;
   }
 });
-exports.configure = configure;
 
 var _oneDimensional = require('./chart/one-dimensional');
 
@@ -157,4 +156,3 @@ Object.defineProperty(exports, 'BubbleChart', {
     return _bubble.BubbleChart;
   }
 });
-function configure() {}

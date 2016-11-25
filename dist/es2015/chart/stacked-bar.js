@@ -29,5 +29,4 @@ export let StackedBarChart = (_dec = scales([quan]), _dec2 = chart('C3', 'stacke
       return this.settings;
     };
   }
-
 }) || _class) || _class);

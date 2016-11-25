@@ -6,11 +6,7 @@ define(['exports', 'aurelia-charts', './one-dimensional'], function (exports, _a
   });
   exports.StackedBarChart = undefined;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -42,7 +38,7 @@ define(['exports', 'aurelia-charts', './one-dimensional'], function (exports, _a
     _inherits(StackedBarChart, _OneDimensional);
 
     function StackedBarChart() {
-      _classCallCheck(this, StackedBarChart);
+      
 
       var _this = _possibleConstructorReturn(this, _OneDimensional.call(this));
 

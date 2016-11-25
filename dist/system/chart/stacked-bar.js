@@ -5,11 +5,7 @@ System.register(['aurelia-charts', './one-dimensional'], function (_export, _con
 
   var scales, chart, quan, OneDimensional, _dec, _dec2, _class, StackedBarChart;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  
 
   function _possibleConstructorReturn(self, call) {
     if (!self) {
@@ -48,7 +44,7 @@ System.register(['aurelia-charts', './one-dimensional'], function (_export, _con
         _inherits(StackedBarChart, _OneDimensional);
 
         function StackedBarChart() {
-          _classCallCheck(this, StackedBarChart);
+          
 
           var _this = _possibleConstructorReturn(this, _OneDimensional.call(this));
 
