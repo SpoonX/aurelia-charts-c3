@@ -7,7 +7,7 @@ System.config({
   },
 
   map: {
-    "aurelia-charts": "npm:aurelia-charts@0.1.1",
+    "aurelia-charts": "npm:aurelia-charts@0.2.0",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.1.1",
     "c3": "npm:c3@0.4.11",
@@ -33,17 +33,17 @@ System.config({
       "util": "npm:util@0.10.3"
     },
     "npm:aurelia-binding@1.0.9": {
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0"
     },
-    "npm:aurelia-charts@0.1.1": {
+    "npm:aurelia-charts@0.2.0": {
       "array-equal": "npm:array-equal@1.0.0",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
-      "aurelia-form": "npm:aurelia-form@0.1.12",
+      "aurelia-form": "npm:aurelia-form@0.3.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.7",
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
       "extend": "npm:extend@3.0.0",
       "typer": "npm:typer@1.1.0"
     },
@@ -51,19 +51,19 @@ System.config({
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
     },
-    "npm:aurelia-form@0.1.12": {
+    "npm:aurelia-form@0.3.0": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.7",
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
-      "aurelia-validatejs": "npm:aurelia-validatejs@0.6.0",
-      "aurelia-view-manager": "npm:aurelia-view-manager@0.0.7",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
+      "aurelia-validatejs": "npm:aurelia-validatejs@0.7.0",
+      "aurelia-view-manager": "npm:aurelia-view-manager@0.1.0",
       "extend": "npm:extend@3.0.0"
     },
     "npm:aurelia-framework@1.0.7": {
       "aurelia-binding": "npm:aurelia-binding@1.0.9",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
@@ -87,27 +87,27 @@ System.config({
       "aurelia-binding": "npm:aurelia-binding@1.0.9",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0"
     },
-    "npm:aurelia-validatejs@0.6.0": {
+    "npm:aurelia-validatejs@0.7.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
-      "aurelia-validation": "npm:aurelia-validation@0.10.1",
+      "aurelia-validation": "npm:aurelia-validation@0.11.0",
       "validate.js": "npm:validate.js@0.10.0"
     },
-    "npm:aurelia-validation@0.10.1": {
+    "npm:aurelia-validation@0.11.0": {
       "aurelia-binding": "npm:aurelia-binding@1.0.9",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0",
       "aurelia-templating": "npm:aurelia-templating@1.1.2"
     },
-    "npm:aurelia-view-manager@0.0.7": {
+    "npm:aurelia-view-manager@0.1.0": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
-      "aurelia-logging": "npm:aurelia-logging@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.1.1",
       "aurelia-path": "npm:aurelia-path@1.1.1",
       "aurelia-templating": "npm:aurelia-templating@1.1.2",
       "extend": "npm:extend@3.0.0"

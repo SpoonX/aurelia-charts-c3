@@ -43,7 +43,7 @@
       "dist": "dist/amd"
     },
     "dependencies": {
-      "aurelia-charts": "^0.1.0",
+      "aurelia-charts": "^0.2.0",
       "c3": "^0.4.11"
     },
     "devDependencies": {
