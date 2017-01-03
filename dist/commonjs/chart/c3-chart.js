@@ -43,9 +43,7 @@ var C3Chart = exports.C3Chart = (_dec = (0, _aureliaCharts.chart)('C3'), _dec(_c
   C3Chart.prototype.create = function create() {
     this.settings.bindto = this.element;
     this.instance = _c2.default.generate(this.settings);
-    if (this.data && this.dimensions) {
-      this.update();
-    }
+    this.update();
   };
 
   C3Chart.prototype.calculateSettings = function calculateSettings() {
@@ -54,6 +52,10 @@ var C3Chart = exports.C3Chart = (_dec = (0, _aureliaCharts.chart)('C3'), _dec(_c
 
   C3Chart.prototype.update = function update(newData, oldData) {
     var _this2 = this;
+
+    if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
+      return;
+    }
 
     var newIds = this.dimensionIds(newData || []);
     var oldIds = this.dimensionIds(oldData || []);

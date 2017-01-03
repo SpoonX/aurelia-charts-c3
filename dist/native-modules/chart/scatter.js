@@ -1,4 +1,13 @@
+'use strict';
+
+exports.__esModule = true;
+exports.ScatterChart = undefined;
+
 var _dec, _dec2, _class;
+
+var _aureliaCharts = require('aurelia-charts');
+
+var _twoDimensional = require('./two-dimensional');
 
 
 
@@ -6,10 +15,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import { quan, scales, chart } from 'aurelia-charts';
-import { TwoDimensional } from './two-dimensional';
-
-export var ScatterChart = (_dec = scales([quan, quan]), _dec2 = chart('C3', 'scatter'), _dec(_class = _dec2(_class = function (_TwoDimensional) {
+var ScatterChart = exports.ScatterChart = (_dec = (0, _aureliaCharts.scales)([_aureliaCharts.quan, _aureliaCharts.quan]), _dec2 = (0, _aureliaCharts.chart)('C3', 'scatter'), _dec(_class = _dec2(_class = function (_TwoDimensional) {
   _inherits(ScatterChart, _TwoDimensional);
 
   function ScatterChart() {
@@ -30,4 +36,4 @@ export var ScatterChart = (_dec = scales([quan, quan]), _dec2 = chart('C3', 'sca
   }
 
   return ScatterChart;
-}(TwoDimensional)) || _class) || _class);
+}(_twoDimensional.TwoDimensional)) || _class) || _class);

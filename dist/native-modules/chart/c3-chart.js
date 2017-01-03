@@ -1,4 +1,17 @@
+'use strict';
+
+exports.__esModule = true;
+exports.C3Chart = undefined;
+
 var _dec, _class;
+
+var _aureliaCharts = require('aurelia-charts');
+
+var _c = require('c3');
+
+var _c2 = _interopRequireDefault(_c);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 
 
@@ -6,10 +19,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import { logger, chart, Chart } from 'aurelia-charts';
-import c3 from 'c3';
-
-export var C3Chart = (_dec = chart('C3'), _dec(_class = function (_Chart) {
+var C3Chart = exports.C3Chart = (_dec = (0, _aureliaCharts.chart)('C3'), _dec(_class = function (_Chart) {
   _inherits(C3Chart, _Chart);
 
   function C3Chart() {
@@ -30,18 +40,20 @@ export var C3Chart = (_dec = chart('C3'), _dec(_class = function (_Chart) {
 
   C3Chart.prototype.create = function create() {
     this.settings.bindto = this.element;
-    this.instance = c3.generate(this.settings);
-    if (this.data && this.dimensions) {
-      this.update();
-    }
+    this.instance = _c2.default.generate(this.settings);
+    this.update();
   };
 
   C3Chart.prototype.calculateSettings = function calculateSettings() {
-    logger.error('\'calculateSettings\' method is not defined for ' + this.constructor.name);
+    _aureliaCharts.logger.error('\'calculateSettings\' method is not defined for ' + this.constructor.name);
   };
 
   C3Chart.prototype.update = function update(newData, oldData) {
     var _this2 = this;
+
+    if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
+      return;
+    }
 
     var newIds = this.dimensionIds(newData || []);
     var oldIds = this.dimensionIds(oldData || []);
@@ -75,4 +87,4 @@ export var C3Chart = (_dec = chart('C3'), _dec(_class = function (_Chart) {
   };
 
   return C3Chart;
-}(Chart)) || _class);
+}(_aureliaCharts.Chart)) || _class);

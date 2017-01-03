@@ -48,7 +48,7 @@ System.register(['./c3-chart'], function (_export, _context) {
         OneDimensional.prototype.calculateSettings = function calculateSettings() {
           var _this2 = this;
 
-          var columns = this.data.map(function (dataset, index, data) {
+          var columns = (this.data || []).map(function (dataset, index, data) {
             var name = _this2.dimensions.name ? _this2.dimensions.name(dataset, index, data) : index;
 
             return [name].concat(dataset.map(_this2.dimensions[0].value));

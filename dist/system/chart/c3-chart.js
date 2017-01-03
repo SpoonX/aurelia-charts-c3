@@ -62,9 +62,7 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
         C3Chart.prototype.create = function create() {
           this.settings.bindto = this.element;
           this.instance = c3.generate(this.settings);
-          if (this.data && this.dimensions) {
-            this.update();
-          }
+          this.update();
         };
 
         C3Chart.prototype.calculateSettings = function calculateSettings() {
@@ -73,6 +71,10 @@ System.register(['aurelia-charts', 'c3'], function (_export, _context) {
 
         C3Chart.prototype.update = function update(newData, oldData) {
           var _this2 = this;
+
+          if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
+            return;
+          }
 
           var newIds = this.dimensionIds(newData || []);
           var oldIds = this.dimensionIds(oldData || []);

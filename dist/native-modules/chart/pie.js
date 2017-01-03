@@ -1,4 +1,13 @@
+'use strict';
+
+exports.__esModule = true;
+exports.PieChart = undefined;
+
 var _dec, _dec2, _class;
+
+var _aureliaCharts = require('aurelia-charts');
+
+var _oneDimensional = require('./one-dimensional');
 
 
 
@@ -6,10 +15,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import { scales, chart, quan } from 'aurelia-charts';
-import { OneDimensional } from './one-dimensional';
-
-export var PieChart = (_dec = scales([quan]), _dec2 = chart('C3', 'pie'), _dec(_class = _dec2(_class = function (_OneDimensional) {
+var PieChart = exports.PieChart = (_dec = (0, _aureliaCharts.scales)([_aureliaCharts.quan]), _dec2 = (0, _aureliaCharts.chart)('C3', 'pie'), _dec(_class = _dec2(_class = function (_OneDimensional) {
   _inherits(PieChart, _OneDimensional);
 
   function PieChart() {
@@ -30,4 +36,4 @@ export var PieChart = (_dec = scales([quan]), _dec2 = chart('C3', 'pie'), _dec(_
   }
 
   return PieChart;
-}(OneDimensional)) || _class) || _class);
+}(_oneDimensional.OneDimensional)) || _class) || _class);

@@ -1,4 +1,13 @@
+'use strict';
+
+exports.__esModule = true;
+exports.BubbleChart = undefined;
+
 var _dec, _dec2, _class;
+
+var _aureliaCharts = require('aurelia-charts');
+
+var _threeDimensional = require('./three-dimensional');
 
 
 
@@ -6,10 +15,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import { quan, scales, chart } from 'aurelia-charts';
-import { ThreeDimensional } from './three-dimensional';
-
-export var BubbleChart = (_dec = scales([quan, quan, quan]), _dec2 = chart('C3', 'bubble'), _dec(_class = _dec2(_class = function (_ThreeDimensional) {
+var BubbleChart = exports.BubbleChart = (_dec = (0, _aureliaCharts.scales)([_aureliaCharts.quan, _aureliaCharts.quan, _aureliaCharts.quan]), _dec2 = (0, _aureliaCharts.chart)('C3', 'bubble'), _dec(_class = _dec2(_class = function (_ThreeDimensional) {
   _inherits(BubbleChart, _ThreeDimensional);
 
   function BubbleChart() {
@@ -35,4 +41,4 @@ export var BubbleChart = (_dec = scales([quan, quan, quan]), _dec2 = chart('C3',
   }
 
   return BubbleChart;
-}(ThreeDimensional)) || _class) || _class);
+}(_threeDimensional.ThreeDimensional)) || _class) || _class);

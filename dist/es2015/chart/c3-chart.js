@@ -17,9 +17,7 @@ export let C3Chart = (_dec = chart('C3'), _dec(_class = class C3Chart extends Ch
   create() {
     this.settings.bindto = this.element;
     this.instance = c3.generate(this.settings);
-    if (this.data && this.dimensions) {
-      this.update();
-    }
+    this.update();
   }
 
   calculateSettings() {
@@ -27,6 +25,10 @@ export let C3Chart = (_dec = chart('C3'), _dec(_class = class C3Chart extends Ch
   }
 
   update(newData, oldData) {
+    if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
+      return;
+    }
+
     const newIds = this.dimensionIds(newData || []);
     const oldIds = this.dimensionIds(oldData || []);
     const unloadIds = oldIds.filter(oldId => newIds.indexOf(oldId) === -1);
