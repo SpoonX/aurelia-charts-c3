@@ -18,9 +18,7 @@ export class C3Chart extends Chart {
   create() {
     this.settings.bindto = this.element;
     this.instance        = c3.generate(this.settings);
-    if (this.data && this.dimensions) {
-      this.update();
-    }
+    this.update();
   }
 
   calculateSettings() {
@@ -28,6 +26,11 @@ export class C3Chart extends Chart {
   }
 
   update(newData, oldData) {
+    // requires the following properties in order to work
+    if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
+      return
+    }
+
     const newIds    = this.dimensionIds(newData || []);
     const oldIds    = this.dimensionIds(oldData || []);
     const unloadIds = oldIds.filter(oldId => newIds.indexOf(oldId) === -1);
