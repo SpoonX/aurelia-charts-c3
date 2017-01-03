@@ -28,7 +28,7 @@ export class C3Chart extends Chart {
   update(newData, oldData) {
     // requires the following properties in order to work
     if (!Array.isArray(this.data) || !this.dimensions || !this.instance) {
-      return
+      return;
     }
 
     const newIds    = this.dimensionIds(newData || []);
